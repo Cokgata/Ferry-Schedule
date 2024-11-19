@@ -1,0 +1,135 @@
+/* Reset margin dan padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(BG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Tetap di tempat saat di-scroll */
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Atur elemen ke ujung kanan dan kiri */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 86, 179, 0.9); /* Transparansi kecil */
+    color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem; /* Ukuran lebih besar */
+}
+
+nav {
+    display: flex;
+    gap: 15px; /* Jarak antar item */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    background-color: #0056b3;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    background-color: #003d80;
+    transform: scale(1.05); /* Efek zoom saat di-hover */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: column; /* Ubah menjadi vertikal */
+        gap: 10px;
+    }
+}
+
+/* Konten utama menggunakan fleksibel */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.8); /* Transparansi */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #0056b3;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+footer {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Tambahkan lebih banyak padding */
+    margin-top: auto;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    line-height: 1.6; /* Tambahkan spasi antar baris */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ffcc00; /* Warna link kontras */
+    text-decoration: underline;
+    transition: color 0.3s ease; /* Animasi perubahan warna */
+}
+
+footer a:hover {
+    color: #ffe066; /* Warna link saat di-hover */
+}
+
+/* Ikon atau simbol */
+.footer-icon {
+    font-size: 18px;
+    margin-right: 5px;
+    vertical-align: middle; /* Ikon sejajar dengan teks */
+}
